@@ -34,8 +34,12 @@ public class PostRequest {
 
         // JsonPath
         JsonPath path = response.jsonPath();
+
         String id = path.getString("id");
-        System.out.println(id);
+        System.out.println("ID is : " + id);
+
+        String name = path.getString("name");
+        Assert.assertEquals(name,"morpheus");
 
     }
 }
